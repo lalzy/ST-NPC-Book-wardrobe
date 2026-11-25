@@ -53,6 +53,8 @@ export async function register() {
                     : 'The clothing this NPC owns. Each chat starts from this list; set what they wear on the Outfit tab.');
             },
         },
+        // Also a tab in a chat NPC's popover, next to State and Outfit (saved with that popover's Save).
+        chatTab: { wide: true },
         personaSheet: {
             label: 'Wardrobe',
             icon: 'fa-shirt',

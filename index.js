@@ -4,7 +4,7 @@
 // the paperdoll offers wardrobe items. Without this extension, NPC Book lets anyone wear any clothing.
 // Built only on NPC Book's public API (window.NPCBook): see NPC Book's EXTENDING.md.
 
-const MIN_API = 7;
+const MIN_API = 8;
 
 async function start(api) {
     if (!(api?.apiVersion >= MIN_API)) {
