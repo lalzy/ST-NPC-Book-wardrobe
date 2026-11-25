@@ -4,9 +4,9 @@ A sister extension for [NPC Book](https://github.com/lalzy/ST-NPC-Book)
 
 NPC Book already has an simple outfit system allowing user or LLM to attach any clothing to the paper doll, this extension adds a **wardrobe** to each character/user that tells the LLM what the character has access to in events it wants to dress it.
 
-![image of the wardrobe tab](https://github.com/lalzy/ST-NPC-Book-wardrobe/image1.png)
+![image of the wardrobe tab](https://github.com/lalzy/ST-NPC-Book-wardrobe/blob/main/image1.png)
 
-![image of the tab in character cards](https://github.com/lalzy/ST-NPC-Book-wardrobe/image2.png)
+![image of the tab in character cards](https://github.com/lalzy/ST-NPC-Book-wardrobe/blob/main/image2.png)
 
 ### Features
 - Per instance (and template) wardrobe.
