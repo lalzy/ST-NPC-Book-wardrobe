@@ -1,0 +1,51 @@
+/* NPC Book — Wardrobe: wardrobe editor (item list with slot grid filter). Moved from NPC Book's style.css. */
+.npcb-wdx { display: flex; gap: 10px; align-items: stretch; min-height: 0; container-type: inline-size; }
+.npcb-wdx-doll { width: 210px; flex-shrink: 0; display: flex; flex-direction: column; gap: 6px; }
+.npcb-wdx-dollhead { display: flex; align-items: center; justify-content: space-between; font-size: .75em; text-transform: uppercase; letter-spacing: .05em; opacity: .7; }
+.npcb-wdx-dollhead i, .npcb-wdx-dollshow { cursor: pointer; padding: 2px 4px; opacity: .8; }
+.npcb-wdx-dollshow { display: none; }
+.npcb-doll-collapsed .npcb-wdx-doll { display: none; }
+.npcb-doll-collapsed .npcb-wdx-dollshow { display: inline-block; }
+.npcb-wdx-grid { display: grid; gap: 4px; grid-template-columns: 1fr 1fr; grid-template-areas: "head hair" "face glasses" "neck piercings" "cover cover" "upper_outer upper_inner" "hands waist" "lower_outer lower_inner" "feet_outer feet_inner" "other other"; }
+.npcb-wdx-cell { border: 1px solid var(--SmartThemeBorderColor); border-radius: 7px; padding: 3px 6px; background: rgba(0, 0, 0, .15); min-height: 34px; font-size: .8em; cursor: pointer; min-width: 0; }
+.npcb-wdx-cell.filled { background: rgba(255, 255, 255, .06); }
+.npcb-wdx-cell.sel { outline: 2px solid var(--SmartThemeQuoteColor, #6a6); }
+.npcb-wdx-cl { display: flex; justify-content: space-between; font-size: .78em; text-transform: uppercase; letter-spacing: .03em; opacity: .55; }
+.npcb-wdx-cw { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.npcb-wdx-cell.stack .npcb-wdx-cw { white-space: normal; }
+.npcb-wdx-list { flex: 1; min-width: 0; display: flex; flex-direction: column; border: 1px solid var(--SmartThemeBorderColor); border-radius: 8px; overflow: hidden; }
+.npcb-wdx-tb { display: flex; gap: 6px; align-items: center; padding: 6px; border-bottom: 1px solid var(--SmartThemeBorderColor); }
+.npcb-wdx-tb .text_pole { margin: 0; }
+.npcb-wdx-q { flex: 1; min-width: 80px; }
+.npcb-wdx-slot, .npcb-wdx-sort { width: auto; max-width: 140px; }
+.npcb-wdx-staronly.on { color: #000; }
+.npcb-wdx-rows { flex: 1; overflow-y: auto; max-height: 55vh; }
+.npcb-wdx-grp { font-size: .72em; text-transform: uppercase; letter-spacing: .05em; opacity: .6; padding: 6px 8px 3px; }
+.npcb-wdx-row { display: flex; align-items: center; gap: 8px; padding: 3px 8px; min-height: 30px; border-top: 1px solid rgba(255, 255, 255, .04); cursor: pointer; font-size: .92em; }
+.npcb-wdx-row:hover { background: rgba(255, 255, 255, .04); }
+.npcb-wdx-row.exp { background: rgba(255, 255, 255, .07); }
+.npcb-wdx-row.sel { background: rgba(127, 179, 138, .12); }
+.npcb-wdx-pick { margin: 0; }
+.npcb-wdx-star { opacity: .3; }
+.npcb-wdx-star.on { opacity: 1; color: #f0c050; }
+.npcb-wdx-name { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.npcb-wdx-badges { display: flex; gap: 3px; flex-shrink: 0; }
+.npcb-wdx-badge { font-size: .72em; padding: 1px 6px; border-radius: 8px; background: rgba(255, 255, 255, .08); white-space: nowrap; }
+.npcb-wdx-dots { opacity: .45; padding: 0 2px; }
+.npcb-wdx-more { font-size: .75em; opacity: .55; padding: 3px 8px 5px 30px; cursor: pointer; }
+.npcb-wdx-more:hover { opacity: .9; }
+.npcb-wdx-ed { display: flex; gap: 12px; padding: 8px 10px 10px 30px; background: rgba(255, 255, 255, .07); flex-wrap: wrap; }
+.npcb-wdx-edmain { flex: 1; min-width: 180px; display: flex; flex-direction: column; gap: 5px; }
+.npcb-wdx-edmain label { display: flex; flex-direction: column; gap: 2px; font-size: .85em; }
+.npcb-wdx-edmain .text_pole { margin: 0; }
+.npcb-wdx-sec { font-size: .72em; text-transform: uppercase; letter-spacing: .05em; opacity: .6; margin-bottom: 3px; }
+.npcb-wdx-mini { display: grid; gap: 3px; width: 190px; grid-template-columns: 1fr 1fr; grid-template-areas: "head hair" "face glasses" "neck piercings" "cover cover" "upper_outer upper_inner" "hands waist" "lower_outer lower_inner" "feet_outer feet_inner" "other other"; }
+.npcb-wdx-mc { font-size: .7em; padding: 2px 5px; border-radius: 5px; border: 1px solid var(--SmartThemeBorderColor); opacity: .5; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.npcb-wdx-mc.on { opacity: 1; background: var(--SmartThemeQuoteColor, #6a6); color: #000; border-color: transparent; }
+.npcb-wdx-bulk { display: flex; align-items: center; gap: 6px; padding: 5px 8px; border-top: 1px solid var(--SmartThemeQuoteColor, #6a6); background: rgba(127, 179, 138, .12); font-size: .9em; }
+.npcb-wdx-bulk .text_pole { margin: 0; width: auto; }
+.npcb-wdx-bulk .menu_button { margin: 0; white-space: nowrap; }
+.npcb-wdx-add { display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-top: 1px solid var(--SmartThemeBorderColor); }
+.npcb-wdx-add .text_pole { flex: 1; margin: 0; }
+.npcb-wdx-add i { opacity: .5; }
+@container (max-width: 520px) { .npcb-wdx-doll { display: none; } .npcb-wdx-dollshow { display: none !important; } .npcb-wdx-badges { display: none; } }
