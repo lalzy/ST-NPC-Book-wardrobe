@@ -46,7 +46,7 @@ export async function register() {
         sheetLabel: 'Wardrobe',
         cardTab: {
             label: 'Wardrobe',
-            icon: 'fa-shirt',
+            icon: 'fa-users-viewfinder',
             render(host, { data, template, scope }) {
                 renderSheet(host, data, template, () => template, scope === 'instance'
                     ? 'This chat\'s own wardrobe. Changes stay in this chat; the Library card is not touched.'
@@ -57,7 +57,7 @@ export async function register() {
         chatTab: { wide: true },
         personaSheet: {
             label: 'Wardrobe',
-            icon: 'fa-shirt',
+            icon: 'fa-users-viewfinder',
             render(host, { data, subject, name }) {
                 renderSheet(host, data, subject, () => ({ name, description: SillyTavern.getContext().powerUserSettings?.persona_description || '' }),
                     'The clothing you own. Set what you wear at the start on the Starting outfit tab.');
@@ -71,7 +71,7 @@ export async function register() {
             const s = settings();
             const items = itemsOf(ext?.[ID], subject);
             const strict = !!items.length && s.enforce && (source === 'editor' || (source === 'tracker' && !(kind === 'char' && s.allowGrowth)));
-            return { items, strict, editLabel: 'Edit wardrobe', editIcon: 'fa-shirt' };
+            return { items, strict, editLabel: 'Edit wardrobe', editIcon: 'fa-users-viewfinder' };
         },
 
         // A new NPC's entry lists its wardrobe and names items from it in "outfit": give those names the wardrobe's slots.

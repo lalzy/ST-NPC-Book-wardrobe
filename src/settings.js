@@ -48,7 +48,7 @@ export function mountSettings(api) {
     const s = settings();
     const html = $(`<div id="npcbw_settings" class="npcbw-settings">
         <div class="inline-drawer">
-            <div class="inline-drawer-toggle inline-drawer-header"><b>NPC Book — Wardrobe</b><div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div></div>
+            <div class="inline-drawer-toggle inline-drawer-header"><b><i class="fa-solid fa-users-viewfinder"></i> NPC Book — Wardrobe</b><div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div></div>
             <div class="inline-drawer-content">
                 <label class="checkbox_label"><input type="checkbox" data-k="enforce"> Only wear what is in the wardrobe <i class="fa-solid fa-circle-info" title="The paperdoll and the AI can only put on wardrobe items (characters without a wardrobe are not limited). Off: the wardrobe is a list of suggestions."></i></label>
                 <label class="checkbox_label"><input type="checkbox" data-k="includeWardrobe"> Send wardrobes to the AI</label>

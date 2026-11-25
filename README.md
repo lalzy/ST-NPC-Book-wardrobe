@@ -1,22 +1,21 @@
 # NPC Book — Wardrobe
 
-A sister extension for [NPC Book](https://github.com/lalzy/ST-NPC-Book) (needs NPC Book 2.0, API 8+).
+A sister extension for [NPC Book](https://github.com/lalzy/ST-NPC-Book)
 
-NPC Book on its own lets anyone wear any clothing: you type items into the paper doll, and the AI names them. This extension adds **wardrobes**, the clothing each character owns:
+NPC Book already has an simple outfit system allowing user or LLM to attach any clothing to the paper doll, this extension adds a **wardrobe** to each character/user that tells the LLM what the character has access to in events it wants to dress it.
 
-- A **Wardrobe** tab on every NPC card, a **Wardrobe** tab in each chat NPC's popover (that chat's own copy), and a **Wardrobe** tab in your persona window.
-- **Only wear what is in the wardrobe** (on by default): the paper doll offers wardrobe items per slot, and the AI can only dress characters from their wardrobe.
-- **NPCs can get new clothing** (on by default): when the AI puts something new on an NPC (given, bought, found), it joins that NPC's wardrobe in this chat. The Library card is never changed.
-- **Send wardrobes to the AI**: each character in the scene sends its wardrobe, and new NPCs the AI introduces get one.
-- **✨ Generate items** on the Wardrobe tab: the LLM suggests clothing that fits the character.
+![image of the wardrobe tab](https://github.com/lalzy/ST-NPC-Book-wardrobe/image1.png)
 
-Settings: **Extensions** → **NPC Book — Wardrobe**.
+![image of the tab in character cards](https://github.com/lalzy/ST-NPC-Book-wardrobe/image2.png)
+
+### Features
+- Per instance (and template) wardrobe.
+- Tells LLM to only allow NPC to equiped what is in it's wardrobe
+- NPC can get new clothing (being given it, buys it, etc, or you just admin-generate it)
+- Have the LLM generate outfits matching the character.
 
 ## Install
 Install it like any SillyTavern extension (Extensions → Install extension, or copy this folder to `SillyTavern/data/<your-user>/extensions/`), next to NPC Book.
-
-## Upgrading from NPC Book 1.x
-Wardrobes you made with NPC Book 1.x are read as they are, so nothing is lost. A wardrobe is stored in this extension's format the next time you save it. Starring items as the starting outfit is now NPC Book's **Outfit** tab on the card (your persona: **Starting outfit**), where wardrobe items are offered per slot.
 
 ## How it is built
 Only through NPC Book's public API (`window.NPCBook`), so it is also a full example for writing your own sister extension. See NPC Book's `EXTENDING.md`. Hooks used: `cardTab` (with `chatTab`), `personaSheet`, `outfitCatalog`, `transformEntry`, `fromTracker`, `onTrackerEntry`, `entryKeys`, `sceneXml` (`sceneXmlAlways`), `instructions`.
